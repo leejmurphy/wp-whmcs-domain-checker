@@ -3,10 +3,10 @@
 Plugin Name: LJM WHMCS Domain Checker
 Plugin URI: http://www.leemurphy.co.uk/offerings/file/2-whmcs-wordpress-domain-checker
 Description: Displays the WHMCS Domain Checker in a widget for WordPress
-Version: 1.0
 Author: Lee Murphy
 Author URI: http://www.leemurphy.co.uk
-License: GNU/GPL
+License: GPLv3
+Version: 1.0
 */
 
 add_action( 'widgets_init', 'ljm_whmcs_domain_checker_widget' );

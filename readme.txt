@@ -2,17 +2,19 @@
 Contributors: leejmurphy
 Donate link: http://www.leemurphy.co.uk
 Tags: whmcs, domain checker
+License: GPLv2 or Later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3
 Tested up to: 3.5.1
-Stable tag: 
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.0
 
 A simple plugin for WordPress that allows you to display the Domain Checker for WHMCS in a nice tidy widget.
 
 == Description ==
 
 This plugin will allow you display the Domain Checker integration code for WHMCS in a nice tidy widget. You MUST have WHMCS installed in order for this plugin to work.
+
+**Follow this plugin on [Git Hub](https://github.com/leejmurphy/wp-whmcs-domain-checker)**
 
 == Installation ==
 
@@ -26,4 +28,4 @@ This plugin will allow you display the Domain Checker integration code for WHMCS
 == Changelog ==
 
 = 1.0 =
-* Version 1
+* Created initial version
