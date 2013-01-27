@@ -6,7 +6,7 @@ Description: Displays the WHMCS Domain Checker in a widget for WordPress
 Author: Lee Murphy
 Author URI: http://www.leemurphy.co.uk
 License: GPLv3
-Version: 1.0
+Version: 1.1
 */
 
 add_action( 'widgets_init', 'ljm_whmcs_domain_checker_widget' );
@@ -39,6 +39,9 @@ class Domain_Widget extends WP_Widget {
 		// Display the form
 		if ( $whmcs_path && $form_type)
 		{
+			// Remove trailing slash(s) (if exists) so we can ensure we only add 1
+			$whmcs_path = rtrim($whmcs_path, '/');
+			
 			if( $form_type == 'domainavailablity' )
 			{
 				$form_path	= $whmcs_path . '/domainchecker.php';
@@ -51,10 +54,9 @@ class Domain_Widget extends WP_Widget {
 				$sld_name	= 'sld';
 				$tld_name	= 'tld';
 			}
-			else exit('Error');
+			else print_r( '<b>An error has occured saving the form type. Please try again or submit a bug report.</b>' );
 			
 			printf( '' . __('<form action="%1$s" method="post">', 'domainchecker') . '', $form_path );
-			printf( '' . __('<input type="hidden" name="token" value="%1$s" />', 'domainchecker') . '', $whmcs_token );
 			
 			echo "	<input type=\"hidden\" name=\"direct\" value=\"true\" />
 					Domain: <input type=\"text\" name=\"".$sld_name."\" size=\"20\" /> <select name=\"".$tld_name."\">
@@ -86,6 +88,7 @@ class Domain_Widget extends WP_Widget {
 				<input type=\"submit\" value=\"Go\" />
 			</form>";
 		}
+		else print_r( '<b>You must enter a valid path to your WHMCS directory.</b>' );
 		
 		echo $after_widget;
 	}
