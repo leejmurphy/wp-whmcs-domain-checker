@@ -6,7 +6,7 @@ Description: Displays the WHMCS Domain Checker in a widget for WordPress
 Author: Lee Murphy
 Author URI: http://www.leemurphy.co.uk
 License: GPLv3
-Version: 1.1.1
+Version: 1.1.2
 */
 
 add_action( 'widgets_init', 'ljm_whmcs_domain_checker_widget' );
@@ -59,7 +59,7 @@ class Domain_Widget extends WP_Widget {
 			printf( '' . __('<form action="%1$s" method="post">', 'domainchecker') . '', $form_path );
 			
 			echo "	<input type=\"hidden\" name=\"direct\" value=\"true\" />
-					Domain: <input type=\"text\" name=\"".$sld_name."\" size=\"20\" /> <select name=\"".$tld_name."\">
+					<label for=\"".$sld_name."\">WWW:</label><input type=\"text\" placeholder=\"yoursite\" id=\"".$sld_name."\" name=\"".$sld_name."\" size=\"20\" /> <select name=\"".$tld_name."\">
 						<option>.com</option>
 						<option>.co.uk</option>
 						<option>.info</option>
