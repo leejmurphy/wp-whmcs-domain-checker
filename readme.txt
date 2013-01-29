@@ -6,7 +6,7 @@ License: GPLv2 or Later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3
 Tested up to: 3.5.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 
 A simple plugin for WordPress that allows you to display the Domain Checker for WHMCS in a nice tidy widget.
 

@@ -6,7 +6,7 @@ Description: Displays the WHMCS Domain Checker in a widget for WordPress
 Author: Lee Murphy
 Author URI: http://www.leemurphy.co.uk
 License: GPLv3
-Version: 1.1
+Version: 1.1.1
 */
 
 add_action( 'widgets_init', 'ljm_whmcs_domain_checker_widget' );
@@ -19,7 +19,7 @@ class Domain_Widget extends WP_Widget {
 
 	function Domain_Widget() {
 		$widget_ops = array( 'classname' => 'domainchecker', 'description' => __('Displays the WHMCS Domain Checker', 'domainchecker') );		
-		$this->WP_Widget( 'whmcsdomainchecker-widget', __('WHMCS Domain Checker', 'domainchecker'), $widget_ops, $control_ops );
+		$this->WP_Widget( 'whmcsdomainchecker-widget', __('WHMCS Domain Checker', 'domainchecker'), $widget_ops );
 	}
 	
 	function widget( $args, $instance ) {
